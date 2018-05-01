@@ -1,0 +1,11 @@
+E:\facultate\Anul 3\New\FunAndFriendshipsGenerator\Data.Core\obj\Debug\netcoreapp2.0\Data.Core.csproj.CoreCompileInputs.cache
+E:\facultate\Anul 3\New\FunAndFriendshipsGenerator\Data.Core\obj\Debug\netcoreapp2.0\Data.Core.AssemblyInfoInputs.cache
+E:\facultate\Anul 3\New\FunAndFriendshipsGenerator\Data.Core\obj\Debug\netcoreapp2.0\Data.Core.AssemblyInfo.cs
+E:\facultate\Anul 3\New\FunAndFriendshipsGenerator\Data.Core\obj\Debug\netcoreapp2.0\Data.Core.csprojResolveAssemblyReference.cache
+E:\facultate\Anul 3\New\FunAndFriendshipsGenerator\Data.Core\bin\Debug\netcoreapp2.0\Data.Core.deps.json
+E:\facultate\Anul 3\New\FunAndFriendshipsGenerator\Data.Core\bin\Debug\netcoreapp2.0\Data.Core.dll
+E:\facultate\Anul 3\New\FunAndFriendshipsGenerator\Data.Core\bin\Debug\netcoreapp2.0\Data.Core.pdb
+E:\facultate\Anul 3\New\FunAndFriendshipsGenerator\Data.Core\bin\Debug\netcoreapp2.0\Constants.dll
+E:\facultate\Anul 3\New\FunAndFriendshipsGenerator\Data.Core\bin\Debug\netcoreapp2.0\Constants.pdb
+E:\facultate\Anul 3\New\FunAndFriendshipsGenerator\Data.Core\obj\Debug\netcoreapp2.0\Data.Core.dll
+E:\facultate\Anul 3\New\FunAndFriendshipsGenerator\Data.Core\obj\Debug\netcoreapp2.0\Data.Core.pdb
