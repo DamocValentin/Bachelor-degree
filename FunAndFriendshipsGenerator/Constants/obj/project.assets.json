@@ -2759,26 +2759,26 @@
   },
   "packageFolders": {
     "C:\\Users\\Valentin Damoc\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "E:\\facultate\\Anul 3\\New\\FunAndFriendshipsGenerator\\Constants\\Constants.csproj",
+      "projectUniqueName": "E:\\facultate\\Anul 3\\Licenta\\FunAndFriendshipsGenerator\\Constants\\Constants.csproj",
       "projectName": "Constants",
-      "projectPath": "E:\\facultate\\Anul 3\\New\\FunAndFriendshipsGenerator\\Constants\\Constants.csproj",
+      "projectPath": "E:\\facultate\\Anul 3\\Licenta\\FunAndFriendshipsGenerator\\Constants\\Constants.csproj",
       "packagesPath": "C:\\Users\\Valentin Damoc\\.nuget\\packages\\",
-      "outputPath": "E:\\facultate\\Anul 3\\New\\FunAndFriendshipsGenerator\\Constants\\obj\\",
+      "outputPath": "E:\\facultate\\Anul 3\\Licenta\\FunAndFriendshipsGenerator\\Constants\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\Valentin Damoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -2803,12 +2803,12 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
-            "version": "2.0.2"
+            "version": "[2.0.2, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           }
         },

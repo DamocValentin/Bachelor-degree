@@ -6,8 +6,8 @@ namespace Data.Core.Domain
 {
     public class User : IdentityUser<Guid>
     {
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public ICollection<Rating> Ratings { get; set; }
         public ICollection<Review> Reviews { get; set; }
         public ICollection<UserActivity> UserActivities { get; set; }

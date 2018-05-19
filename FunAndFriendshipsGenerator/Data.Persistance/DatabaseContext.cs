@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Data.Persistance
 {
-    public sealed class DatabaseContext : IdentityUserContext<User, Guid>
+    public sealed class DatabaseContext : IdentityDbContext<User, Role, Guid>
     {
         public DbSet<Activity> Activities { get; set; }
         public DbSet<ActivityType> ActivityTypes { get; set; }

@@ -3774,26 +3774,26 @@
   },
   "packageFolders": {
     "C:\\Users\\Valentin Damoc\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "E:\\facultate\\Anul 3\\New\\FunAndFriendshipsGenerator\\Data.Persistance\\Data.Persistance.csproj",
+      "projectUniqueName": "E:\\facultate\\Anul 3\\Licenta\\FunAndFriendshipsGenerator\\Data.Persistance\\Data.Persistance.csproj",
       "projectName": "Data.Persistance",
-      "projectPath": "E:\\facultate\\Anul 3\\New\\FunAndFriendshipsGenerator\\Data.Persistance\\Data.Persistance.csproj",
+      "projectPath": "E:\\facultate\\Anul 3\\Licenta\\FunAndFriendshipsGenerator\\Data.Persistance\\Data.Persistance.csproj",
       "packagesPath": "C:\\Users\\Valentin Damoc\\.nuget\\packages\\",
-      "outputPath": "E:\\facultate\\Anul 3\\New\\FunAndFriendshipsGenerator\\Data.Persistance\\obj\\",
+      "outputPath": "E:\\facultate\\Anul 3\\Licenta\\FunAndFriendshipsGenerator\\Data.Persistance\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\Valentin Damoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -3805,8 +3805,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "E:\\facultate\\Anul 3\\New\\FunAndFriendshipsGenerator\\Data.Core\\Data.Core.csproj": {
-              "projectPath": "E:\\facultate\\Anul 3\\New\\FunAndFriendshipsGenerator\\Data.Core\\Data.Core.csproj"
+            "E:\\facultate\\Anul 3\\Licenta\\FunAndFriendshipsGenerator\\Data.Core\\Data.Core.csproj": {
+              "projectPath": "E:\\facultate\\Anul 3\\Licenta\\FunAndFriendshipsGenerator\\Data.Core\\Data.Core.csproj"
             }
           }
         }
@@ -3822,12 +3822,12 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
-            "version": "2.0.2"
+            "version": "[2.0.2, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           }
         },
