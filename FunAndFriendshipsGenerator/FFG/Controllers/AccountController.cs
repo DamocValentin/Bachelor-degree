@@ -66,7 +66,7 @@ namespace FFG.Controllers
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToAction("Activities", "Home");
                 }
                 if (result.RequiresTwoFactor)
                 {
@@ -239,7 +239,7 @@ namespace FFG.Controllers
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     _logger.LogInformation("User created a new account with password.");
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToAction("Activities", "Home");
                 }
                 AddErrors(result);
             }

@@ -18,6 +18,6 @@ E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\Data.Core\obj\Debug\netco
 E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\Data.Core\obj\Debug\netcoreapp2.0\Data.Core.csproj.CoreCompileInputs.cache
 E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\Data.Core\obj\Debug\netcoreapp2.0\Data.Core.AssemblyInfoInputs.cache
 E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\Data.Core\obj\Debug\netcoreapp2.0\Data.Core.AssemblyInfo.cs
+E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\Data.Core\obj\Debug\netcoreapp2.0\Data.Core.csproj.CopyComplete
 E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\Data.Core\obj\Debug\netcoreapp2.0\Data.Core.dll
 E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\Data.Core\obj\Debug\netcoreapp2.0\Data.Core.pdb
-E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\Data.Core\obj\Debug\netcoreapp2.0\Data.Core.csproj.CopyComplete

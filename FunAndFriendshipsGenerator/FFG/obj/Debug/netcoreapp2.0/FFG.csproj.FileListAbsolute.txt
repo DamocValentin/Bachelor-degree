@@ -3,12 +3,6 @@ E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\bin\Debug\netcoreapp2
 E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\bin\Debug\netcoreapp2.0\FFG.runtimeconfig.dev.json
 E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\bin\Debug\netcoreapp2.0\FFG.dll
 E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\bin\Debug\netcoreapp2.0\FFG.pdb
-E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\obj\Debug\netcoreapp2.0\FFG.csprojResolveAssemblyReference.cache
-E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\obj\Debug\netcoreapp2.0\FFG.csproj.CoreCompileInputs.cache
-E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\obj\Debug\netcoreapp2.0\FFG.AssemblyInfoInputs.cache
-E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\obj\Debug\netcoreapp2.0\FFG.AssemblyInfo.cs
-E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\obj\Debug\netcoreapp2.0\FFG.dll
-E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\obj\Debug\netcoreapp2.0\FFG.pdb
 E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\bin\Debug\netcoreapp2.0\Business.dll
 E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\bin\Debug\netcoreapp2.0\Constants.dll
 E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\bin\Debug\netcoreapp2.0\Data.Core.dll
@@ -17,5 +11,11 @@ E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\bin\Debug\netcoreapp2
 E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\bin\Debug\netcoreapp2.0\Constants.pdb
 E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\bin\Debug\netcoreapp2.0\Data.Core.pdb
 E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\bin\Debug\netcoreapp2.0\Data.Persistance.pdb
-E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\obj\Debug\netcoreapp2.0\FFG.csproj.CopyComplete
+E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\obj\Debug\netcoreapp2.0\FFG.csprojResolveAssemblyReference.cache
+E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\obj\Debug\netcoreapp2.0\FFG.csproj.CoreCompileInputs.cache
 E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\obj\Debug\netcoreapp2.0\FFG.AssemblyInfoInputs.cache
+E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\obj\Debug\netcoreapp2.0\FFG.AssemblyInfo.cs
+E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\obj\Debug\netcoreapp2.0\FFG.csproj.CopyComplete
+E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\obj\Debug\netcoreapp2.0\FFG.dll
+E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\FFG\obj\Debug\netcoreapp2.0\FFG.pdb
