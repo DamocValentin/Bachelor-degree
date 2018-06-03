@@ -9,12 +9,12 @@ namespace Business
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
-        protected readonly DatabaseContext Context;
+        protected readonly DatabaseContext _context;
         protected readonly DbSet<TEntity> _entities;
 
         public GenericRepository(DatabaseContext context)
         {
-            Context = context;
+            _context = context;
             _entities = context.Set<TEntity>();
         }
 

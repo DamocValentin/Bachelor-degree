@@ -12,7 +12,7 @@ namespace Business.Repository
 
         public DatabaseContext DatabaseContext
         {
-            get { return Context as DatabaseContext; }
+            get { return _context as DatabaseContext; }
         }
     }
 }

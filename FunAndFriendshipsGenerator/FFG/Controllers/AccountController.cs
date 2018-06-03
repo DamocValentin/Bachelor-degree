@@ -14,6 +14,8 @@ using FFG.Models;
 using FFG.Models.AccountViewModels;
 using FFG.Services;
 using Data.Core.Domain;
+using Business;
+using Data.Core;
 
 namespace FFG.Controllers
 {
@@ -21,17 +23,20 @@ namespace FFG.Controllers
     [Route("[controller]/[action]")]
     public class AccountController : Controller
     {
+        private readonly IUnitOfWork _unitOfWork;
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
 
         public AccountController(
+            IUnitOfWork unitOfWork,
             UserManager<User> userManager,
             SignInManager<User> signInManager,
             IEmailSender emailSender,
             ILogger<AccountController> logger)
         {
+            _unitOfWork = unitOfWork;
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
@@ -62,20 +67,12 @@ namespace FFG.Controllers
             {
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
+                var username = await _unitOfWork.Users.GetUsernameByEmailAsync(model.Email);
+                var result = await _signInManager.PasswordSignInAsync(username, model.Password, model.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
                     return RedirectToAction("Activities", "Home");
-                }
-                if (result.RequiresTwoFactor)
-                {
-                    return RedirectToAction(nameof(LoginWith2fa), new { returnUrl, model.RememberMe });
-                }
-                if (result.IsLockedOut)
-                {
-                    _logger.LogWarning("User account locked out.");
-                    return RedirectToAction(nameof(Lockout));
                 }
                 else
                 {
@@ -254,7 +251,7 @@ namespace FFG.Controllers
         {
             await _signInManager.SignOutAsync();
             _logger.LogInformation("User logged out.");
-            return RedirectToAction(nameof(HomeController.Index), "Home");
+            return RedirectToAction("Login", "Account");
         }
 
         [HttpPost]

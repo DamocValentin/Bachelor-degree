@@ -1,0 +1,17 @@
+﻿
+.activity-card {
+    width: 745px;
+    height: 220px;
+    background-color: aliceblue;
+    text-align: center;
+    float: left;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+    transition: all 0.1s;
+    border-right: 1px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    border-radius: 6px;
+    box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    margin-top: 5px;
+}

@@ -8,6 +8,10 @@ using Microsoft.Extensions.DependencyInjection;
 using FFG.Services;
 using Data.Persistance;
 using Data.Core.Domain;
+using Data.Core;
+using Business;
+using Data.Core.Interfaces;
+using Business.Repository;
 
 namespace FFG
 {
@@ -35,6 +39,14 @@ namespace FFG
             services.AddMvc();
             services.AddSingleton<IEmailConfiguration>(Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>());
             services.AddTransient<IEmailSender, EmailSender>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<IActivityRepository, ActivityRepository>();
+            services.AddTransient<IActivityTypeRepository, ActivityTypeRepository>();
+            services.AddTransient<IRatingRepository, RatingRepository>();
+            services.AddTransient<IReviewRepository, ReviewRepository>();
+            services.AddTransient<IUserActivityRepository, UserActivityRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

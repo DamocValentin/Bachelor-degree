@@ -38,5 +38,10 @@ namespace FFG.Controllers
         {
             return View();
         }
+
+        public IActionResult ActivitiesSelected()
+        {
+            return View();
+        }
     }
 }
