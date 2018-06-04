@@ -12,5 +12,10 @@ namespace FFG.Controllers
         {
             return View();
         }
+
+        public IActionResult CreateActivity()
+        {
+            return View();
+        }
     }
 }

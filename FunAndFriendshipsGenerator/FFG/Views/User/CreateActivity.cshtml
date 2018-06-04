@@ -1,0 +1,61 @@
+﻿@model FFG.Models.UserViewModels.CreateActivityViewModel
+
+@{
+    ViewData["Title"] = "CreateActivity";
+}
+
+<div class="profile-container">
+    <div class="profile-title"><h1>Create activity</h1></div>
+    <div class="create-activity-card">
+        <div class="create-activity-row">
+            <div class="col-md-6">
+                <form asp-action="CreateActivity">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="ActivityName" class="control-label"></label>
+                        <input asp-for="ActivityName" class="form-control" />
+                        <span asp-validation-for="ActivityName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ActivityTypeName" class="control-label"></label>
+                        <input asp-for="ActivityTypeName" class="form-control" />
+                        <span asp-validation-for="ActivityTypeName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ActivityDescription" class="control-label"></label>
+                        <input asp-for="ActivityDescription" class="form-control" />
+                        <span asp-validation-for="ActivityDescription" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="NumberOfParticipants" class="control-label"></label>
+                        <input asp-for="NumberOfParticipants" class="form-control" />
+                        <span asp-validation-for="NumberOfParticipants" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Location" class="control-label"></label>
+                        <input asp-for="Location" class="form-control" />
+                        <span asp-validation-for="Location" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="StartTime" class="control-label"></label>
+                        <input asp-for="StartTime" class="form-control" />
+                        <span asp-validation-for="StartTime" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EndTime" class="control-label"></label>
+                        <input asp-for="EndTime" class="form-control" />
+                        <span asp-validation-for="EndTime" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Cost" class="control-label"></label>
+                        <input asp-for="Cost" class="form-control" />
+                        <span asp-validation-for="Cost" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn-application" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

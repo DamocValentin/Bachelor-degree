@@ -87,7 +87,7 @@
     margin: 0;
     padding: 1.5rem 4.5rem;
     background: var(--color-primary-500);
-    color: var(--color-secondary-900);
+    color: white;
     font-family: inherit;
     font-size: 1.4rem;
     font-weight: 300;
@@ -101,6 +101,6 @@
     background-color:coral;
 }
 
-.links--application{
+.links--application {
     color:white;
 }
