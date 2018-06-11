@@ -178,6 +178,8 @@ namespace FFG.Controllers
                     _logger.LogInformation("User created a new account with password.");
                     var userResult = await _unitOfWork.Users.GetUserByUsernameAsync(model.FirstName + model.LastName);
                     _userContext.Id = userResult.Id;
+                    await _unitOfWork.Ratings.InsertAsync(Rating.Create(userResult.Id));
+                    await _unitOfWork.CompleteAsync();
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     var callbackUrl = Url.EmailConfirmationLink(user.Id.ToString(), code, Request.Scheme);

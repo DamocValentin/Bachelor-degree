@@ -8,6 +8,5 @@ namespace Data.Core.Interfaces
     {
         Task<string> GetUsernameByEmailAsync(string emailAdress);
         Task<User> GetUserByUsernameAsync(string username);
-        Task<User> GetUserByIdAsync(Guid id);
     }
 }

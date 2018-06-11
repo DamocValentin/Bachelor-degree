@@ -23,19 +23,13 @@ namespace FFG.Controllers
         public async Task<IActionResult> MyProfile()
         {
             UserViewModel userModel = new UserViewModel();
-            userModel.ActivitiesNumber = 0;
-            userModel.BehaviourPoints = 0;
-            userModel.SkillPoints = 0;
-            userModel.UserName =  (await _unitOfWork.Users.GetUserByIdAsync(_userContext.Id)).UserName;
 
-            var ratings = (await _unitOfWork.Ratings.GetAllAsync()).FindAll(x => x.UserId == _userContext.Id);
+            userModel.UserName =  (await _unitOfWork.Users.GetByIdAsync(_userContext.Id)).UserName;
 
-            foreach(var rate in ratings)
-            {
-                userModel.ActivitiesNumber += rate.GamesNumber;
-                userModel.BehaviourPoints += rate.BehaviourScore;
-                userModel.SkillPoints += rate.SkillScore;
-            }
+            var rating = (await _unitOfWork.Ratings.GetRatingByUserIdAsync(_userContext.Id));
+            userModel.ActivitiesNumber = rating.GamesNumber;
+            userModel.BehaviourPoints = rating.BehaviourScore;
+            userModel.SkillPoints = rating.SkillScore;
 
             return View(userModel);
         }
@@ -60,19 +54,13 @@ namespace FFG.Controllers
         public async Task<IActionResult> UserProfile(Guid id)
         {
             UserViewModel userModel = new UserViewModel();
-            userModel.ActivitiesNumber = 0;
-            userModel.BehaviourPoints = 0;
-            userModel.SkillPoints = 0;
-            userModel.UserName = (await _unitOfWork.Users.GetUserByIdAsync(id)).UserName;
 
-            var ratings = (await _unitOfWork.Ratings.GetAllAsync()).FindAll(x => x.UserId == id);
+            userModel.UserName = (await _unitOfWork.Users.GetByIdAsync(id)).UserName;
 
-            foreach (var rate in ratings)
-            {
-                userModel.ActivitiesNumber += rate.GamesNumber;
-                userModel.BehaviourPoints += rate.BehaviourScore;
-                userModel.SkillPoints += rate.SkillScore;
-            }
+            var rating = (await _unitOfWork.Ratings.GetRatingByUserIdAsync(id));
+            userModel.ActivitiesNumber = rating.GamesNumber;
+            userModel.BehaviourPoints = rating.BehaviourScore;
+            userModel.SkillPoints = rating.SkillScore;
 
             return View(userModel);
         }

@@ -17,12 +17,6 @@ namespace Data.Core.Configuration
                 .WithMany(t => t.Ratings)
                 .HasForeignKey(t => t.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
-
-            builder
-               .HasOne(t => t.ActivityType)
-               .WithMany(t => t.Ratings)
-               .HasForeignKey(t => t.ActivityTypeId)
-               .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

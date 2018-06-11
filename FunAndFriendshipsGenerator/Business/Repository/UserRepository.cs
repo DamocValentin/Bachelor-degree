@@ -29,10 +29,5 @@ namespace Business.Repository
         {
             return await DatabaseContext.Users.FirstOrDefaultAsync(x => x.UserName.Equals(username));
         }
-
-        public async Task<User> GetUserByIdAsync(Guid id)
-        {
-            return await DatabaseContext.Users.FirstOrDefaultAsync(x => x.Id == id);
-        }
     }
 }
