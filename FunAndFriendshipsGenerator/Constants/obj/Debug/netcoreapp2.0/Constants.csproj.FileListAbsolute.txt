@@ -14,3 +14,4 @@ E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\Constants\obj\Debug\netco
 E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\Constants\obj\Debug\netcoreapp2.0\Constants.AssemblyInfo.cs
 E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\Constants\obj\Debug\netcoreapp2.0\Constants.dll
 E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\Constants\obj\Debug\netcoreapp2.0\Constants.pdb
+E:\facultate\Anul 3\Licenta\FunAndFriendshipsGenerator\Constants\obj\Debug\netcoreapp2.0\Constants.csprojResolveAssemblyReference.cache

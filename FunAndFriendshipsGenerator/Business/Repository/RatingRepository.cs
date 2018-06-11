@@ -1,4 +1,5 @@
-﻿using Data.Core.Domain;
+﻿using Constants;
+using Data.Core.Domain;
 using Data.Core.Interfaces;
 using Data.Persistance;
 using Microsoft.EntityFrameworkCore;
@@ -22,9 +23,9 @@ namespace Business.Repository
 
         public async Task<List<Rating>> GetUsersRankingByPageAsync(int pageIndex, int pageSize, string typeOfRating)
         {
-            if (typeOfRating.Equals("SkillScore"))
+            if (typeOfRating.Equals(RatingConstants.SkillRating))
             {
-                return await DatabaseContext.Ratings.OrderBy(x => x.SkillScore).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToListAsync();
+                return await DatabaseContext.Ratings.OrderByDescending(x => x.SkillScore).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToListAsync();
             }
 
             return await DatabaseContext.Ratings.OrderBy(x => x.BehaviourScore).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToListAsync();

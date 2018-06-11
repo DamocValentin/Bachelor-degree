@@ -47,8 +47,7 @@ namespace FFG.Controllers
         public async Task<IActionResult> ActivitiesSelected(Guid id)
         {
             ActivitiesSelectedViewModel activitiesSelectedViewModel = new ActivitiesSelectedViewModel();
-            var activitiesSelected = await _unitOfWork.Activities.GetAllAvailableActivitiesByTypeIdAsync(id);
-            activitiesSelectedViewModel.activities = activitiesSelected;
+            activitiesSelectedViewModel.activities = await _unitOfWork.Activities.GetAllAvailableActivitiesByTypeIdAsync(id);
 
             string activityType = (await _unitOfWork.ActivityTypes.GetByIdAsync(id)).ActivityTypeName;
             activitiesSelectedViewModel.activityTypeName = activityType;
