@@ -16,7 +16,7 @@
 }
 
 .box {
-    width: 25%;
+    width: 100%;
     min-width: 250px;
     display: block;
     height: 50px;
@@ -72,7 +72,7 @@
 }
 
 .ranking-title {
-    padding-top: 4%;
+    padding-top: 9%;
     padding-bottom: 2%;
 }
 
@@ -135,4 +135,9 @@
 
 .pagination li:last-child a {
             border-radius: 0 40px 40px 0;
+}
+
+.ranking-wrapper{
+    margin-top: 260px!important;
+    margin-bottom: 50px!important;
 }

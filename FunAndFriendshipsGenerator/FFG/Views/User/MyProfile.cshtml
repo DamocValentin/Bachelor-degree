@@ -1,0 +1,23 @@
+﻿@model FFG.Models.UserViewModels.UserViewModel
+
+<div class="profile-container">
+    <div class="activities-container">
+        <div class="profile-title"><h1>Profile</h1></div>
+        <div class="card">
+            <div class="profile-content">
+                <div><h3>@Model.UserName</h3></div>
+                <div><h3></h3></div>
+                <div><h3>@Model.SkillPoints Skill points</h3></div>
+                <div><h3></h3></div>
+                <div><h3>@Model.BehaviourPoints Behaviour points</h3></div>
+                <div><h3></h3></div>
+                <div><h3>@Model.ActivitiesNumber Activities participations</h3></div>
+            </div>
+            <div button-body>
+                <button class="btn-profile">
+                    <span class="text"><a asp-controller="User" asp-action="MyActivities" class="btn-aplication-name">My activities</a></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

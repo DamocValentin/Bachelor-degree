@@ -16,6 +16,7 @@ namespace Data.Core.Configuration
             builder.Property(activity => activity.EndTime).IsRequired();
             builder.Property(activity => activity.Cost).IsRequired();
             builder.Property(activity => activity.ParticipantsNumber).IsRequired();
+            builder.Property(activity => activity.MaxParticipantsNumber).IsRequired();
             builder.Property(activity => activity.Description).HasMaxLength(ConfigurationConstants.MaxLength).IsRequired();
             builder.Property(activity => activity.Name).HasMaxLength(ConfigurationConstants.MaxLength).IsRequired();
             builder.Property(activity => activity.Location).HasMaxLength(ConfigurationConstants.MaxLength).IsRequired();

@@ -11,7 +11,7 @@ namespace Data.Core.Configuration
         {
             builder.ToTable("ActivityType");
             builder.HasKey(activityType => activityType.Id);
-            builder.Property(activityType => activityType.Type).HasMaxLength(ConfigurationConstants.MaxLength).IsRequired();
+            builder.Property(activityType => activityType.ActivityTypeName).HasMaxLength(ConfigurationConstants.MaxLength).IsRequired();
         }
     }
 }

@@ -4,13 +4,11 @@
 
 .card {
     height: 500px;
-    width: 700px;
+    width: 744px;
     background: aliceblue;
     font-family: Roboto;
     display: block;
     position: relative;
-    margin: 50px auto;
-    border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.2s ease-in-out;
 }
@@ -20,11 +18,25 @@
 }
 
 .profile-title {
-    padding-top: 9%;
+    margin-top: 30%;
+    -webkit-box-shadow: 10px 10px 91px 0px rgba(193,79,82,1);
+    -moz-box-shadow: 10px 10px 91px 0px rgba(193,79,82,1);
+    box-shadow: 10px 10px 91px 0px rgba(193,79,82,1);
+    z-index: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    padding: 20px;
+    width: 744px;
+    position: relative;
+    top: 0px;
+
 }
 
 .profile-title h1 {
-    color: aliceblue;
+        color: aliceblue;
+        font-weight: 100;
+        margin: 0px;
+        padding: 0px;
 }
 
 .profile-content {
@@ -42,14 +54,14 @@
     font-family: var(--font-primary);
 }
 
-.btn-profile {
-    margin-top: 50px!important;
+.btn-profile {   
+    margin-top: 50px !important;
     position: relative;
     display: inline-block;
     margin: 0;
     padding: 1.5rem 4.5rem;
     background: var(--color-primary-500);
-    color: var(--color-secondary-900);
+    color: white;
     font-family: inherit;
     font-size: 1.4rem;
     font-weight: 300;
@@ -60,25 +72,25 @@
     appearance: none;
     cursor: pointer;
     transition: background 250ms, box-shadow 250ms;
+    background-color: coral;
 }
 
-    .btn-profile:hover {
-        background: var(--color-primary-600);
+.btn-profile:hover, .btn-application:hover {
         box-shadow: -2px 2px 16px rgba(0, 0, 0, 0.6);
-    }
+}
 
-    .btn-profile:active, .btn-profile:focus {
+.btn-profile:active, .btn-profile:focus {
         outline: none;
-    }
+}
 
-    .btn-profile:active {
+.btn-profile:active {
         box-shadow: -4px 4px 24px rgba(0, 0, 0, 0.8);
-    }
+}
 
-    .btn-profile .text {
+.btn-profile .text {
         position: relative;
         z-index: 2;
-    }
+}
 
 .btn-application {
     margin-top: 40px !important;
@@ -102,5 +114,9 @@
 }
 
 .links--application {
+    color:white;
+}
+
+.btn-aplication-name{
     color:white;
 }

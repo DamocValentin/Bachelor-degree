@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Data.Core.Interfaces
 {
     public interface IGenericRepository<TEntity> where TEntity : class
     {
-        TEntity GetById(Guid id);
-        List<TEntity> GetAll();
-
-        void Insert(TEntity entity);
-        void Update(TEntity entity);
-        void Delete(TEntity entity);
+        Task<TEntity> GetByIdAsync(Guid id);
+        Task<List<TEntity>> GetAllAsync();
+        Task<bool> InsertAsync(TEntity entity);
+        Task<bool> UpdateAsync(TEntity entity);
+        Task<bool> DeleteAsync(TEntity entity);
     }
 }

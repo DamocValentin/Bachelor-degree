@@ -12,6 +12,9 @@ using Data.Core;
 using Business;
 using Data.Core.Interfaces;
 using Business.Repository;
+using FFG.Seeder;
+using FFG.UserContext;
+using Microsoft.AspNetCore.Http;
 
 namespace FFG
 {
@@ -39,7 +42,8 @@ namespace FFG
             services.AddMvc();
             services.AddSingleton<IEmailConfiguration>(Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>());
             services.AddTransient<IEmailSender, EmailSender>();
-            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<DbSeeder>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();  
             services.AddTransient<IActivityRepository, ActivityRepository>();
             services.AddTransient<IActivityTypeRepository, ActivityTypeRepository>();
             services.AddTransient<IRatingRepository, RatingRepository>();
@@ -47,10 +51,13 @@ namespace FFG
             services.AddTransient<IUserActivityRepository, UserActivityRepository>();
             services.AddTransient<IUserRepository, UserRepository>();
 
+            services.AddSingleton<IUserContext, UserContext.UserContext>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, DbSeeder dbSeeder)
         {
             if (env.IsDevelopment())
             {
@@ -73,6 +80,15 @@ namespace FFG
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            {
+                var dbContext = serviceScope.ServiceProvider.GetService<DatabaseContext>();
+
+                dbContext.Database.Migrate();
+
+                dbSeeder.SeedAsync().Wait();
+            }
         }
     }
 }

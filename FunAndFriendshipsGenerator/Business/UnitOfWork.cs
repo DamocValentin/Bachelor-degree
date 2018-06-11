@@ -2,6 +2,7 @@
 using Data.Core;
 using Data.Core.Interfaces;
 using Data.Persistance;
+using System.Threading.Tasks;
 
 namespace Business
 {
@@ -26,9 +27,9 @@ namespace Business
 
         }
 
-        public int Complete()
+        public async Task<int> CompleteAsync()
         {
-            return _context.SaveChanges();
+            return await _context.SaveChangesAsync();
         }
 
         public void Dispose()

@@ -1,19 +1,13 @@
-﻿
-@{
-    ViewData["Title"] = "Activities";
-}
-
+﻿@model FFG.Models.HomeViewModels.ActivitiesViewModel
 
 <div class="activities-body">
     <div class="activities-container">
         <div class="activities-wrapper"><h1>Types of activities</h1></div>
         <div class="activities-list">
-            <div class="client"><span class="logo"></span><h2><a asp-controller="Home" asp-action="ActivitiesSelected">Soccer</a></h2></div>
-            <div class="client"><span class="logo"></span><h2><a asp-controller="Home" asp-action="ActivitiesSelected">Handball</a></h2></div>
-            <div class="client"><span class="logo"></span><h2><a asp-controller="Home" asp-action="ActivitiesSelected">Basketball</a></h2></div>
-            <div class="client"><span class="logo"></span><h2><a asp-controller="Home" asp-action="ActivitiesSelected">Tennis</a></h2></div>
-            <div class="client"><span class="logo"></span><h2><a asp-controller="Home" asp-action="ActivitiesSelected">Volleyball</a></h2></div>
-            <div class="client"><span class="logo"></span><h2><a asp-controller="Home" asp-action="ActivitiesSelected">Rugby</a></h2></div>
+            @foreach (var activity in Model.activities.ToList())
+            {
+                <div class="client"><span class="logo"></span><h2><a asp-controller="Home" asp-action="ActivitiesSelected" asp-route-id="@activity.Id">@activity.ActivityTypeName</a></h2></div>
+            }
         </div>
     </div>
 </div>

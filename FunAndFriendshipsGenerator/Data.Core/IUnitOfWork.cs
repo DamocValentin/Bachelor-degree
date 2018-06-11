@@ -1,5 +1,6 @@
 ﻿using Data.Core.Interfaces;
 using System;
+using System.Threading.Tasks;
 
 namespace Data.Core
 {
@@ -12,6 +13,6 @@ namespace Data.Core
         IUserRepository Users { get; }
         IUserActivityRepository UserActivities { get; }
 
-        int Complete();
+        Task<int> CompleteAsync();
     }
 }

@@ -1,19 +1,25 @@
-﻿
-@{
-    ViewData["Title"] = "ActivitiesSelected";
-}
+﻿@model FFG.Models.HomeViewModels.ActivitiesSelectedViewModel
 
 
 <div class="activitiesSelected-body">
     <div class="activities-container">
-        <div class="activities-wrapper"><h1>[Type of Activity]</h1></div>
+        <div class="activities-wrapper"><h1>@Model.activityTypeName</h1></div>
         <div class="activities-list">
-            <div class="activity-card">fff</div>
-            <div class="activity-card">fff</div>
-            <div class="activity-card">sss</div>
-            <div class="activity-card">ddd</div>
-            <div class="activity-card">gggg</div>
-            <div class="activity-card">hhhh</div>
+            @foreach (var activity in Model.activities.ToList())
+            {
+                <div class="activity-card">
+                    <div class="col-md-8 description-activity">
+                        <div>Location: @activity.Location</div>
+                        <div>Date: @activity.StartTime - @activity.EndTime</div>
+                        <div>Description: @activity.Description</div>
+                        <div>@activity.ParticipantsNumber / @activity.MaxParticipantsNumber</div>
+                        <div>Price: @activity.Cost</div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="btn-application"><a asp-controller="Home" asp-action="ParticipationRequest" asp-route-id="@activity.Id">Participate</a></div>
+                    </div>
+                </div>
+            }
         </div>
     </div>
 </div>

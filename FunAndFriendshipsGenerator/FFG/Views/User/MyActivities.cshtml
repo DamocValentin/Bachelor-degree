@@ -1,0 +1,24 @@
+﻿@model FFG.Models.UserViewModels.UserActivitiesViewModel
+
+<div class="activitiesSelected-body">
+    <div class="activities-container">
+        <div class="activities-wrapper"><h1>My Activities</h1></div>
+        <div class="activities-list">
+            @foreach (var activity in Model.activitiesList)
+            {
+                <div class="activity-card">
+                    <div class="col-md-8 description-activity">
+                        <div>Location: @activity.Location</div>
+                        <div>Date: @activity.StartTime - @activity.EndTime</div>
+                        <div>Description: @activity.Description</div>
+                        <div>@activity.ParticipantsNumber / @activity.MaxParticipantsNumber</div>
+                        <div>Price: @activity.Cost</div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="btn-application"><a asp-controller="User" asp-action="ActivityDetails" asp-route-id="@activity.Id">Details</a></div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
