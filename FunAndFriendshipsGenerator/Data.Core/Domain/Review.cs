@@ -15,16 +15,14 @@ namespace Data.Core.Domain
 
         public static Review Create(Guid userId, Guid activityId)
         {
-            var instance = new Review { Id = Guid.NewGuid() };
-            instance.Update(false, userId, activityId);
+            var instance = new Review { Id = Guid.NewGuid(), UserId = userId, ActivityId = activityId };
+            instance.Update(false);
             return instance;
         }
 
-        public void Update(bool reviewSubmitted, Guid userId, Guid activityId)
+        public void Update(bool reviewSubmitted)
         {
             ReviewSubmitted = reviewSubmitted;
-            UserId = userId;
-            ActivityId = activityId;
         }
     }
 }

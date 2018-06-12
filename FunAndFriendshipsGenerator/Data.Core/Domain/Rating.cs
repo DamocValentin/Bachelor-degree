@@ -15,16 +15,15 @@ namespace Data.Core.Domain
         public static Rating Create(Guid userId)
         {
             var instance = new Rating { Id = Guid.NewGuid() };
-            instance.Update(0, 0, 0, userId);
+            instance.Update(0, 0, 0);
             return instance;
         }
 
-        public void Update(double behaviourScore, double skillScore, int gamesNumber, Guid userId)
+        public void Update(double behaviourScore, double skillScore, int gamesNumber)
         {
             BehaviourScore = behaviourScore;
             SkillScore = skillScore;
             GamesNumber = gamesNumber;
-            UserId = userId;
         }
     }
 }

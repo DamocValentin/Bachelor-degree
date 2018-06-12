@@ -40,5 +40,10 @@ namespace Data.Core.Domain
             ActivityTypeId = activityTypeId;
 
         }
+
+        public void UpdateParticipantsNumber()
+        {
+            ParticipantsNumber++;
+        }
     }
 }

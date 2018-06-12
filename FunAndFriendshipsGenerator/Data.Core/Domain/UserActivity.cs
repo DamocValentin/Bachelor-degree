@@ -7,6 +7,7 @@ namespace Data.Core.Domain
         public Guid Id { get; private set; }
         public bool ApprovalStatus { get; private set; }
         public bool Owner { get; private set; }
+        public bool Rejected { get; private set; }
 
         public Guid UserId { get; private set; }
         public virtual User User { get; set; }
@@ -16,17 +17,16 @@ namespace Data.Core.Domain
 
         public static UserActivity Create(Guid userId, Guid activityId)
         {
-            var instance = new UserActivity { Id = Guid.NewGuid() };
-            instance.Update(false, false, userId, activityId);
+            var instance = new UserActivity { Id = Guid.NewGuid(), UserId = userId, ActivityId = activityId };
+            instance.Update(false, false, false);
             return instance;
         }
 
-        public void Update(bool approvalStatus, bool owner, Guid userId, Guid activityId)
+        public void Update(bool approvalStatus, bool owner, bool rejected)
         {
             ApprovalStatus = approvalStatus;
             Owner = owner;
-            UserId = userId;
-            ActivityId = activityId;
+            Rejected = rejected;
         }
     }
 }
