@@ -156,6 +156,7 @@ namespace FFG.Controllers
         public async Task<IActionResult> CompleteReview(Guid activityId)
         {
             List<User> users = await _unitOfWork.UserActivities.GetAllUsersByActivityIdAsync(activityId);
+
             CompleteReviewViewModel model = new CompleteReviewViewModel();
             model.BehaviourProints = new List<int>();
             model.SkillPoints = new List<int>();
