@@ -4,37 +4,37 @@
     <div class="activities-container">
         <div class="activities-wrapper"><h1>Participants</h1></div>
         <div class="activities-list">
-            @for(int i =  0; i < Model.Users.ToList().Count; i++)
+            @for (int i = 0; i < Model.Users.ToList().Count; i++)
             {
-                @if(!Model.UserActivities.ElementAt(i).Rejected)
+                @if (!Model.UserActivities.ElementAt(i).Rejected)
                 {
                     <div class="activity-card">
-                    <div class="col-md-8 description-activity">
-                        <div>Username: @Model.Users.ElementAt(i).UserName</div>
-                        <div>User's number of games: @Model.UserRatings.ElementAt(i).GamesNumber</div>
-                        <div>Behaviour score: @Model.UserRatings.ElementAt(i).BehaviourScore</div>
-                        <div>Skill score: @Model.UserRatings.ElementAt(i).SkillScore</div>
-                    </div>
-                    <div class="col-md-4">
-                        @if(Model.Owner && Model.Activity.StartTime > DateTime.Now)
-                        {
-                            @if(!Model.UserActivities.ElementAt(i).ApprovalStatus)
+                        <div class="col-md-8 description-activity">
+                            <div>Username: @Model.Users.ElementAt(i).UserName</div>
+                            <div>User's number of games: @Model.UserRatings.ElementAt(i).GamesNumber</div>
+                            <div>Behaviour score: @Model.UserRatings.ElementAt(i).BehaviourScore</div>
+                            <div>Skill score: @Model.UserRatings.ElementAt(i).SkillScore</div>
+                        </div>
+                        <div class="col-md-4">
+                            @if (Model.Owner && Model.Activity.StartTime > DateTime.Now)
                             {
-                                <div class="btn-application"><a asp-controller="User" asp-action="AcceptUserRequest" asp-route-userId="@Model.Users.ElementAt(i).Id" asp-route-activityId="@Model.Activity.Id">Accept Request</a></div>
-                                <div class="btn-application"><a asp-controller="User" asp-action="DeclineUserRequest" asp-route-userId="@Model.Users.ElementAt(i).Id" asp-route-activityId="@Model.Activity.Id">Decline Request</a></div>
+                                @if (!Model.UserActivities.ElementAt(i).ApprovalStatus)
+                                {
+                                    <div class="btn-application"><a asp-controller="User" asp-action="AcceptUserRequest" asp-route-userId="@Model.Users.ElementAt(i).Id" asp-route-activityId="@Model.Activity.Id">Accept Request</a></div>
+                                    <div class="btn-application"><a asp-controller="User" asp-action="DeclineUserRequest" asp-route-userId="@Model.Users.ElementAt(i).Id" asp-route-activityId="@Model.Activity.Id">Decline Request</a></div>
+                                }
                             }
-                        }
+                        </div>
                     </div>
-                </div>
                 }
             }
         </div>
-        @if(Model.Activity.EndTime < DateTime.Now)
+            @if (Model.Activity.EndTime < DateTime.Now)
+    {
+        @if (!Model.Review.ReviewSubmitted)
         {
-           @if(Model.Review.ReviewSubmitted)
-           {
-               <div class="activities-wrapper-details"><h1><a asp-controller="User" asp-action="CompleteReview" asp-route-activityId="@Model.Activity.Id">Submit Review!</a></h1></div>
-           }
+            <div class="activities-wrapper-details"><h1><a  asp-controller="User" asp-action="CompleteReview" asp-route-activityId="@Model.Activity.Id">Submit review!</a></h1></div>
         }
+    }
     </div>
 </div>

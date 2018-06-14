@@ -161,6 +161,7 @@ namespace FFG.Controllers
             model.BehaviourProints = new List<int>();
             model.SkillPoints = new List<int>();
             model.Users = new List<User>();
+            model.UsersId = new List<Guid>();
             model.ActivityId = activityId;
 
             foreach(var user in users)
@@ -168,6 +169,9 @@ namespace FFG.Controllers
                 if(user.Id != _userContext.Id)
                 {
                     model.Users.Add(user);
+                    model.SkillPoints.Add(0);
+                    model.BehaviourProints.Add(0);
+                    model.UsersId.Add(user.Id);
                 }
             }
 
@@ -177,9 +181,9 @@ namespace FFG.Controllers
         [HttpPost]
         public async Task<IActionResult> CompleteReview(CompleteReviewViewModel model)
         {
-            for(int i = 0; i < model.Users.Count; i++)
+            for(int i = 0; i < model.UsersId.Count; i++)
             {
-                var ranking = await _unitOfWork.Ratings.GetRatingByUserIdAsync(model.Users.ElementAt(i).Id);
+                var ranking = await _unitOfWork.Ratings.GetRatingByUserIdAsync(model.UsersId.ElementAt(i));
                 int games = ranking.GamesNumber + 1;
                 ranking.Update(model.BehaviourProints.ElementAt(i), model.SkillPoints.ElementAt(i), games);
                 await _unitOfWork.CompleteAsync();

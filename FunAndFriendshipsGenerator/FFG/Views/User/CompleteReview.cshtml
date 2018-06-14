@@ -1,25 +1,31 @@
 ﻿@model FFG.Models.UserViewModels.CompleteReviewViewModel
 
-@{
-    ViewData["Title"] = "CompleteReview";
-}
+<div class="profile-container">
+    <div class="activities-container">
+        <div class="activities-wrapper">
+            <h1>Rate the participants</h1>
+            <h4>First row for behaviour</h4>
+            <h4>Second row for skills</h4>
+        </div>
+        <div class="create-activity-card">
+            <div class="create-activity-row">
+                <div class="col-md-6">
+                    <form method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        @for(int i = 0; i < Model.Users.Count; i++)
+                        {
+                        <div class="form-group">
+                            <label asp-for="@Model.Users[i].UserName" class="control-label">@Model.Users.ElementAt(i).UserName</label>
+                            <input asp-for="@Model.BehaviourProints[i]" value="@Model.BehaviourProints.ElementAt(i)" type="number" min="0" max="10" class="form-control" />
+                            <input asp-for="@Model.SkillPoints[i]" value="@Model.SkillPoints.ElementAt(i)" type="number" min="0" max="10" class="form-control" />
+                            <input asp-for="@Model.UsersId[i]" value="@Model.UsersId[i]" type="hidden" class="form-control" />
+                        </div>
 
-<h2>CompleteReview</h2>
-
-<h4>CompleteReviewViewModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="CompleteReview">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                        }
+                        <button type="submit" class="btn-application">Create</button>
+                    </form>
+                </div>
             </div>
-        </form>
+        </div>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
